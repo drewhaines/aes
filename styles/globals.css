@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Cosmic Sans MS";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.imageRotateHorizontal {
+  -moz-animation: spinHorizontal 2s infinite linear;
+  -o-animation: spinHorizontal 2s infinite linear;
+  -webkit-animation: spinHorizontal 2s infinite linear;
+  animation: spinHorizontal 2s infinite linear;
+}
+
+@keyframes spinHorizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+  80% {
+    transform: rotateY(0deg);
+  }
+  81% {
+    transform: rotateY(-360deg);
+  }
+}
