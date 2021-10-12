@@ -47,6 +47,21 @@ body {
   }
 }
 
+.contact_us {
+  background-color: #ff4444;
+  color: white;
+  padding: 15px 25px 17px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  display: inline-block;
+
+  &:hover {
+    background-color: #e33131;
+  }
+}
+
 .aes_info_item {
   margin: 0px;
   margin-bottom: 10px;
@@ -171,7 +186,8 @@ body {
 .aes_workshop {
   max-width: 500px;
   border-radius: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .see_our_services {
@@ -254,6 +270,7 @@ body {
   font-weight: normal;
   font-size: 22px;
   line-height: 36px;
+  max-width: 800px;
 
   span {
     text-transform: uppercase;
@@ -262,7 +279,7 @@ body {
 
 .section_2_subtitle_3 {
   margin: 0 auto;
-  padding-top: 25px;
+  padding-top: 15px;
   padding-bottom: 10px;
   font-weight: normal;
   max-width: 800px;
@@ -272,9 +289,8 @@ body {
 
 .section_2_subtitle_5 {
   margin: 0 auto;
-  padding-top: 25px;
+  padding-top: 45px;
   padding-bottom: 10px;
-  text-transform: uppercase;
   font-weight: normal;
   font-size: 22px;
 }
@@ -293,10 +309,8 @@ body {
 .section_2_subtitle_4 {
   font-weight: normal;
   margin: 0;
-  padding: 0px;
+  padding-top: 15px;
   padding-bottom: 15px;
-  text-transform: uppercase;
-  color: #ff4444;
   max-width: 1000px;
   margin: auto;
   font-size: 22px;
@@ -322,6 +336,11 @@ body {
 .section_3 {
   background: #ff4444;
   padding: 50px 25px 50px 25px;
+}
+
+.address-link {
+  color: rgb(48, 106, 214);
+  cursor: pointer;
 }
 
 .section_3_grid {
@@ -401,6 +420,44 @@ body {
 .normal_text {
   padding: 10px 25px;
   font-size: 18px;
+}
+
+.aes-outside {
+  width: 100%;
+}
+
+.aes_logo {
+  max-width: 200px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.winner {
+  color: #ff4444;
+  text-align: center;
+  font-size: 22px;
+  margin: 0px;
+}
+
+.rights {
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.happy {
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 25px;
+
+  span {
+    display: inline-block;
+    margin-left: 11px;
+    margin-right: 10px;
+  }
 }
 
 // Inbetween styles
