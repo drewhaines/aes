@@ -8,30 +8,48 @@ import Swiper from "react-id-swiper";
 
 import "swiper/swiper-bundle.min.css";
 
-export const getStaticProps = async () => {
-  let instagramPosts = [];
-
-  try {
-    let response = await fetch(IG_URL);
-    const responseJson = response ? await response.json() : {};
-    const instagram = responseJson.data;
-
-    if (instagram.user.edge_owner_to_timeline_media.count > 0) {
-      instagramPosts = instagram.user.edge_owner_to_timeline_media.edges;
-    }
-  } catch (err) {
-    console.log(
-      "Something went wrong while fetching content from Instagram",
-      err
-    );
+const reviews = [
+  {
+    name: "Dave W.",
+    review:
+      "Best place in town with great prices along with knowledgeable and friendly staff.  Highly recommend."
+  },
+  {
+    name: "Bert A.",
+    review:
+      "These guys know their stuff and the prices are very good.  If I could give 100 stars I would."
+  },
+  {
+    name: "Tom M.",
+    review:
+      "Mark and his team stand behind their work and have the best prices in town. \n\nIf you need a starter or alternator this is the place to go. I've had them rebuild  my rare boat starter, alternator and even an electric motor for an industrial garage door. These guys are good at what they do."
+  },
+  {
+    name: "Marrion O.",
+    review:
+      "The employees here are super helpful and knowledgeable. Ben went out of his way to help me quickly and efficiently. Thanks guys for running a well managed place!"
+  },
+  {
+    name: "Jacob R.",
+    review:
+      "Very knowledgable staff! I have brought several alternators and steering gear boxes for rebuild here over the years and have never been disappointed. Prices are very fair."
+  },
+  {
+    name: "Joshua C.",
+    review:
+      "We've been using these guys for years at Evolve Custom Automotive Restoration, to rebuild our steering boxes, generators, alternators, starters. They're full-service, fast, and very reasonable on cost."
+  },
+  {
+    name: "Ramiro G.",
+    review:
+      "Had a very difficult time removing a bad alternator out of a 2004 Ford Escape 3.0L.  Did not trust buying a rebuilt replacement from the auto parts stores. Took it here on a rainy day in SD.  \n\nMark took really good care of me and had my alternator professionally rebuilt on the premises in less than an hour. These folks are experts on these matters and always stand behind their work."
+  },
+  {
+    name: "Kevin C.",
+    review:
+      "I originally went to AES years ago on a recommendation from other professionals in my business, offshore charter fishing. I have always been impressed with the level of service and quality work they provide. \n\nToday one of my alternators malfunctioned and I needed an upgrade and replacement. The new alternator works great and now I can do my job. Thanks to Justin, Greg, Mark and all the friendly staff there at AES."
   }
-
-  return {
-    props: {
-      instagramPosts
-    }
-  };
-};
+];
 
 export default function Home() {
   const ref = useRef(null);
@@ -89,15 +107,18 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        ></link>
       </Head>
       <div class="nav">
         <div class="logo_wrapper">
           <div class="logo_inner">
             <img src="/logo.png" class="logo" />
           </div>
-          <span></span>
           <a
-            href="https://www.ebay.com/usr/automotiveexchangeandsupply"
+            href="https://www.ebay.com/str/aessandiego"
             target="_blank"
             class="shop_inventory"
           >
@@ -164,7 +185,9 @@ export default function Home() {
             GENERATORS • HEATER MOTORS • REGULATORS • SOLENOIDS • STARTERS •
             STARTER DRIVES • WATER PUMPS • WINDOW LIFT MOTORS • WIPER MOTORS
           </h2>
-          <h2 class="section_2_subtitle_4">We'll do our best be of service</h2>
+          <h2 class="section_2_subtitle_4">
+            If you need help with a motor or related equipment, we can help!
+          </h2>
           <a href="#contact" class="contact_us">
             Contact Us
           </a>
@@ -188,14 +211,25 @@ export default function Home() {
             <h2 id="reviews" class="reviews">
               Reviews
             </h2>
-            <Container mt={5}>
-              <Swiper autoplay={{ delay: 10000 }} loop ref={ref}>
-                <Box sx={itemStyle}>Slide #1</Box>
-                <Box sx={itemStyle}>Slide #2</Box>
-                <Box sx={itemStyle}>Slide #3</Box>
-                <Box sx={itemStyle}>Slide #4</Box>
-                <Box sx={itemStyle}>Slide #5</Box>
-                <Box sx={itemStyle}>Slide #6</Box>
+            <Container mt={5} sx={{ maxWidth: "800px" }}>
+              <Swiper autoplay={{ delay: 8000 }} loop ref={ref}>
+                {reviews.map((review) => (
+                  <Box sx={itemStyle}>
+                    <Box sx={{ mb: 2, fontSize: 18 }}>{review.name}</Box>
+                    <Box sx={{ mb: 2 }}>
+                      {[1, 2, 3, 4, 5].map((index) => (
+                        <i
+                          class="fa fa-star"
+                          style={{ fontSize: "24px", color: "#F6CB03" }}
+                        ></i>
+                      ))}
+                    </Box>
+
+                    <Box sx={{ fontSize: 18, whiteSpace: "pre-wrap" }}>
+                      {review.review}
+                    </Box>
+                  </Box>
+                ))}
               </Swiper>
             </Container>
             <Grid
@@ -232,6 +266,10 @@ export default function Home() {
 
               <span></span>
             </Grid>
+            <h2 class="section_2_subtitle_6">
+              We appreciate the opportunity to be of service and will do our
+              absolute best!
+            </h2>
           </div>
         </div>
         <div class="section_wrapper">
@@ -242,13 +280,15 @@ export default function Home() {
             <Container>
               <Grid
                 sx={{
-                  gridTemplateColumns: "auto 1fr",
+                  gridTemplateColumns: ["1fr", "auto 1fr"],
                   mt: 8,
+                  gridGap: ["8px", "15px"],
                   fontSize: "16px",
                   margin: "auto",
                   width: "auto",
                   p: 5
                 }}
+                className="info-grid"
               >
                 <Box>Phone</Box>
                 <Box>(619) 282-3207</Box>

@@ -12,7 +12,7 @@ body {
 
 .logo_wrapper {
   display: grid;
-  grid-template-columns: auto 1fr auto auto auto auto;
+  grid-template-columns: 1fr auto auto auto auto;
   justify-content: center;
   align-items: center;
   grid-gap: 15px;
@@ -25,7 +25,6 @@ body {
 .logo_inner {
   display: grid;
   grid-template-columns: auto auto;
-  justify-content: center;
   align-items: center;
   grid-gap: 0px;
 }
@@ -47,6 +46,14 @@ body {
   }
 }
 
+.info-grid div:nth-child(even) {
+  padding-bottom: 10px;
+}
+
+.info-grid div:last-child {
+  padding-bottom: 0px;
+}
+
 .contact_us {
   background-color: #ff4444;
   color: white;
@@ -54,7 +61,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 0px;
   display: inline-block;
 
   &:hover {
@@ -269,12 +276,26 @@ body {
   padding-bottom: 15px;
   font-weight: normal;
   font-size: 22px;
-  line-height: 36px;
+  line-height: 30px;
   max-width: 800px;
 
   span {
     text-transform: uppercase;
+    display: block;
+    margin-top: 15px;
   }
+}
+
+.section_2_subtitle_6 {
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+  max-width: 800px;
+  text-align: center;
+  color: white;
 }
 
 .section_2_subtitle_3 {
@@ -435,7 +456,7 @@ body {
 .winner {
   color: #ff4444;
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   margin: 0px;
 }
 
@@ -557,13 +578,14 @@ body {
   .section_2_title {
     margin: 0 auto;
     position: relative;
-    padding-top: 35px;
+    padding-top: 25px;
   }
 
   .section_2_subtitle {
-    font-size: 22px;
-    padding: 15px 30px;
-    line-height: 30px;
+    font-size: 18px;
+    padding: 25px 30px;
+    line-height: 26px;
+    padding-bottom: 0px;
 
     span {
       display: block;
@@ -572,18 +594,20 @@ body {
   }
 
   .section_2_subtitle_2 {
-    font-size: 22px;
+    font-size: 18px;
     padding: 10px 30px;
-  }
-
-  .section_2_subtitle_3 {
-    padding: 20px 20px;
-    padding-top: 30px;
+    padding-top: 0px;
   }
 
   .section_2_subtitle_4 {
+    font-size: 20px;
     padding: 20px 20px;
-    padding-top: 00px;
+    padding-top: 20px;
+  }
+
+  .section_2_subtitle_5 {
+    font-size: 20px;
+    padding: 20px;
   }
 
   .image_grid {
