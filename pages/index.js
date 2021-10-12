@@ -283,7 +283,7 @@ export default function Home() {
                   gridTemplateColumns: ["1fr", "auto 1fr"],
                   mt: 8,
                   gridGap: ["8px", "15px"],
-                  fontSize: "16px",
+                  fontSize: ["16px", "18px"],
                   margin: "auto",
                   width: "auto",
                   p: 5
