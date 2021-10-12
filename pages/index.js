@@ -1,6 +1,12 @@
+import { useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { jsx, Box, Container, Heading, Grid, Text } from "theme-ui";
+import SwiperCore, { Lazy, Navigation, Autoplay } from "swiper";
+SwiperCore.use([Lazy, Navigation, Autoplay]);
+import Swiper from "react-id-swiper";
+
+import "swiper/swiper-bundle.min.css";
 
 export const getStaticProps = async () => {
   let instagramPosts = [];
@@ -28,6 +34,20 @@ export const getStaticProps = async () => {
 };
 
 export default function Home() {
+  const ref = useRef(null);
+
+  const goNext = () => {
+    if (ref.current !== null && ref.current.swiper !== null) {
+      ref.current.swiper.slideNext();
+    }
+  };
+
+  const goPrev = () => {
+    if (ref.current !== null && ref.current.swiper !== null) {
+      ref.current.swiper.slidePrev();
+    }
+  };
+
   return (
     <div>
       <Head>
@@ -116,7 +136,7 @@ export default function Home() {
               4354 Twain Ave, San Diego CA 92120
             </a>
             <p class="aes_info_item_2">(619) 282-3207</p>
-            <p class="hours">Mon - Fri | 8AM - 4PM</p>
+            <p class="hours">Mon - Fri | 7:30AM - 4PM</p>
             <p class="hours_2">Sat - Sun | Closed</p>
           </div>
         </div>
@@ -127,8 +147,11 @@ export default function Home() {
             Services
           </h1>
           <h2 class="section_2_subtitle">
-            We offer applications for Automotive • Marine • Industrial • Light &
-            Heavy Duty • Vintage & Obsolete
+            We offer applications for: <br />
+            <span>
+              Automotive • Marine • Industrial • Light & Heavy Duty • Vintage &
+              Obsolete
+            </span>
           </h2>
           <img
             src="/workshop-1-filter.jpg"
@@ -144,9 +167,7 @@ export default function Home() {
           <h2 class="section_2_subtitle_3">
             Commercial • Industrial • Hard to Find
           </h2>
-          <h2 class="section_2_subtitle_4">
-            WE WELCOME THE OPPORTUNITY TO BE OF SERVICE
-          </h2>
+          <h2 class="section_2_subtitle_4">We'll do our best be of service</h2>
           <h2 class="section_2_subtitle_5">Over 100+ Years Experience</h2>
           <div class="image_grid">
             <img
@@ -167,6 +188,50 @@ export default function Home() {
             <h2 id="reviews" class="reviews">
               Reviews
             </h2>
+            <Container mt={5}>
+              <Swiper autoplay={{ delay: 10000 }} loop ref={ref}>
+                <Box sx={itemStyle}>Slide #1</Box>
+                <Box sx={itemStyle}>Slide #2</Box>
+                <Box sx={itemStyle}>Slide #3</Box>
+                <Box sx={itemStyle}>Slide #4</Box>
+                <Box sx={itemStyle}>Slide #5</Box>
+                <Box sx={itemStyle}>Slide #6</Box>
+              </Swiper>
+            </Container>
+            <Grid
+              sx={{
+                gridTemplateColumns: "1fr auto 1fr auto 1fr",
+                mt: 5
+              }}
+            >
+              <span></span>
+              <Box
+                sx={{
+                  background: "white",
+                  color: "black",
+                  padding: 3,
+                  borderRadius: "8px"
+                }}
+                onClick={goPrev}
+              >
+                Prev
+              </Box>
+
+              <span></span>
+              <Box
+                sx={{
+                  background: "white",
+                  color: "black",
+                  padding: 3,
+                  borderRadius: "8px"
+                }}
+                onClick={goNext}
+              >
+                Next
+              </Box>
+
+              <span></span>
+            </Grid>
           </div>
         </div>
         <div class="section_wrapper">
@@ -197,7 +262,7 @@ export default function Home() {
                 4354 Twain Ave, San Diego CA 92120
               </a>
               <p class="aes_info_item_2">(619) 282-3207</p>
-              <p class="hours">Mon - Fri | 8AM - 4PM</p>
+              <p class="hours">Mon - Fri | 7:30AM - 4PM</p>
               <p class="hours_2">Sat - Sun | Closed</p>
             </div>
           </div>
@@ -206,3 +271,10 @@ export default function Home() {
     </div>
   );
 }
+
+const itemStyle = {
+  background: "white",
+  minHeight: 300,
+  borderRadius: "20px",
+  padding: "20px"
+};
