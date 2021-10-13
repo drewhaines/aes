@@ -150,14 +150,14 @@ export default function Home() {
           </a>
           <div class="aes_info">
             <a
-              href="https://goo.gl/maps/54PEu17PBdUvZsZ39"
+              href="https://goo.gl/maps/xbchMMxHsa14QnUN6"
               target="_blank"
               class="aes_info_item"
             >
-              4354 Twain Ave, San Diego CA 92120
+              303 W 35th St, National City, CA 91950
             </a>
             <p class="aes_info_item_2">(619) 282-3207</p>
-            <p class="hours">Mon - Fri | 7:30AM - 4PM</p>
+            <p class="hours">Mon - Fri | 8AM - 4PM</p>
             <p class="hours_2">Sat - Sun | Closed</p>
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function Home() {
           <h2 class="section_2_subtitle">
             We offer applications for: <br />
             <span>
-              Automotive • Marine • Comercial • Industrial • Light & Heavy Duty
+              Automotive • Marine • Commercial • Industrial • Light & Heavy Duty
               • Vintage & Obsolete • Hard to Find
             </span>
           </h2>
@@ -180,10 +180,10 @@ export default function Home() {
             className="aes_workshop"
           />
           <h2 class="section_2_subtitle_2">
-            HYDAULIC RAMS • RACK & PINION • GEAR BOXES • POWER STREERING PUMPS •
-            TURBOS • HYDRO VACS • ALTERNATORS • BLOWER MOTORS • DISTRIBUTORS •
+            HYDRAULIC RAMS • RACK & PINION • GEAR BOXES • POWER STREERING PUMPS
+            • TURBOS • HYDRO VACS • ALTERNATORS • BLOWER MOTORS • DISTRIBUTORS •
             GENERATORS • HEATER MOTORS • REGULATORS • SOLENOIDS • STARTERS •
-            STARTER DRIVES • WATER PUMPS • WINDOW LIFT MOTORS • WIPER MOTORS
+            STARTER DRIVES • WINDOW LIFT MOTORS • WIPER MOTORS
           </h2>
           <h2 class="section_2_subtitle_4">
             If you need help with a motor or related equipment, we can help!
@@ -299,30 +299,30 @@ export default function Home() {
                 <Box>Address</Box>
                 <Box>
                   <a
-                    href="https://goo.gl/maps/54PEu17PBdUvZsZ39"
+                    href="https://goo.gl/maps/xbchMMxHsa14QnUN6"
                     target="_blank"
                     className="address-link"
                   >
-                    4354 Twain Ave, San Diego CA 92120
+                    303 W 35th St, National City, CA 91950
                   </a>
                 </Box>
                 <Box>Hours</Box>
                 <Box>
-                  <Box>Mon - Fri | 7:30AM - 4PM</Box>
+                  <Box>Mon - Fri | 8AM - 4PM</Box>
                   <Box>Sat - Sun | Closed</Box>
                 </Box>
               </Grid>
               <Grid sx={{ gridTemplateColumns: ["1fr", "1fr 1fr"], mt: 0 }}>
                 <Box>
                   <img
-                    src="/outside-3.png"
+                    src="/outside-4.png"
                     alt="aes-workshop"
                     className="aes-outside"
                   />
                 </Box>
                 <Box>
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13417.048924991348!2d-117.1004229!3d32.7853055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d955c721699f11%3A0x42e425b42e224100!2s4354%20Twain%20Ave%2C%20San%20Diego%2C%20CA%2092120!5e0!3m2!1sen!2sus!4v1633817526511!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107498.95859999857!2d-117.17018084179684!3d32.65032989999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d955c722415a15%3A0x19cc56b31a97ff20!2sAutomotive%20Exchange%20%26%20Supply-Ca!5e0!3m2!1sen!2sus!4v1634162338841!5m2!1sen!2sus"
                     width="100%"
                     height="100%"
                     style={{ border: "none", minHeight: "300px" }}
