@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>AES - San Diego Automotive Exchange & Supply</title>
+        <title>AES - Automotive Exchange & Supply Inc., of CA</title>
         <link rel="icon" href="logo.png" />
         <meta
           name="description"
@@ -82,16 +82,16 @@ export default function Home() {
 
         <meta
           name="title"
-          content="AES - San Diego Automotive Exchange & Supply"
+          content="AES - Automotive Exchange & Supply Inc., of CA"
         />
         <meta
           property="og:title"
-          content="AES - San Diego Automotive Exchange & Supply"
+          content="AES - Automotive Exchange & Supply Inc., of CA"
         />
         <meta property="og:type" content="song" />
         <meta
           property="og:site_name"
-          content="AES - San Diego Automotive Exchange & Supply"
+          content="AES - Automotive Exchange & Supply Inc., of CA"
         />
         <meta property="og:url" content="https://aesautosupply.com/" />
         <meta
@@ -139,7 +139,7 @@ export default function Home() {
         />
         <div class="section_1">
           <h1 class="homepage_headline">
-            San Diego Automotive Exchange & Supply
+            Automotive Exchange & Supply Inc., of CA
           </h1>
           <h2 class="homepage_subtitle">
             Quality remanufactured auto parts & services from a local business
@@ -154,7 +154,7 @@ export default function Home() {
               target="_blank"
               class="aes_info_item"
             >
-              303 W 35th St, National City, CA 91950
+              303 W 35th St. Suite #D, National City, CA 91950
             </a>
             <p class="aes_info_item_2">(619) 282-3207</p>
             <p class="hours">Mon - Fri | 8AM - 4PM</p>
@@ -180,8 +180,8 @@ export default function Home() {
             className="aes_workshop"
           />
           <h2 class="section_2_subtitle_2">
-            HYDRAULIC RAMS • RACK & PINION • GEAR BOXES • POWER STREERING PUMPS
-            • TURBOS • HYDRO VACS • ALTERNATORS • BLOWER MOTORS • DISTRIBUTORS •
+            HYDRAULIC RAMS • STREET STRIPERS • RACK & PINION • GEAR BOXES •
+            POWER STREERING PUMPS • HYDRO VACS • ALTERNATORS • BLOWER MOTORS •
             GENERATORS • HEATER MOTORS • REGULATORS • SOLENOIDS • STARTERS •
             STARTER DRIVES • WINDOW LIFT MOTORS • WIPER MOTORS
           </h2>
@@ -303,7 +303,7 @@ export default function Home() {
                     target="_blank"
                     className="address-link"
                   >
-                    303 W 35th St, National City, CA 91950
+                    303 W 35th St. Suite #D, National City, CA 91950
                   </a>
                 </Box>
                 <Box>Hours</Box>
@@ -334,7 +334,12 @@ export default function Home() {
               <Grid sx={{ alignItems: "center", justifyContent: "center" }}>
                 <img src="/logo.png" alt="aes-logo" className="aes_logo" />
                 <p className="winner">Be a Winner</p>
-                <p className="rights">All rights reserved AES San Diego</p>
+                <p className="rights">
+                  {`Automotive Exchange & Supply Inc., of CA `}
+                </p>
+                <p className="rights">{`All rights reserved `}</p>
+
+                <p className="rights">{`1993-${new Date().getFullYear()}`}</p>
                 <p className="happy">
                   🏎️
                   <span>
