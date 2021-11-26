@@ -93,7 +93,7 @@ export default function Home() {
           property="og:site_name"
           content="AES - Automotive Exchange & Supply Inc., of CA"
         />
-        <meta property="og:url" content="https://aesautosupply.com/" />
+        <meta property="og:url" content="https://aesrebuilders.com/" />
         <meta
           property="og:description"
           content="San Diego auto parts exchange and supply with over 100 years experience."
@@ -101,7 +101,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://aesautosupply.com/car-workshop.jpg"
+          content="https://aesrebuilders.com/aes-outside.jpg"
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap"
@@ -132,7 +132,7 @@ export default function Home() {
       <div class="section_wrapper">
         <Image
           alt="aes-workshop"
-          src="/car-workshop.jpg"
+          src="/aes-outside.jpg"
           layout="fill"
           objectFit="cover"
           quality={100}
@@ -175,15 +175,16 @@ export default function Home() {
             </span>
           </h2>
           <img
-            src="/workshop-1-filter.jpg"
+            src="/front-counter.jpg"
             alt="aes-workshop"
             className="aes_workshop"
           />
           <h2 class="section_2_subtitle_2">
-            HYDRAULIC RAMS • STREET STRIPERS • RACK & PINION • GEAR BOXES •
-            POWER STREERING PUMPS • HYDRO VACS • ALTERNATORS • BLOWER MOTORS •
-            GENERATORS • HEATER MOTORS • REGULATORS • SOLENOIDS • STARTERS •
-            STARTER DRIVES • WINDOW LIFT MOTORS • WIPER MOTORS
+            HYDRAULIC RAMS • HYDRAULIC MOTORS & PUMPS • RACK & PINION • GEAR
+            BOXES • POWER STREERING PUMPS • HYDROBOOSTERS • ALTERNATORS •
+            DISTRIBUTORS • BLOWER MOTORS • GENERATORS • HEATER MOTORS •
+            REGULATORS • SOLENOIDS • STARTERS • STARTER DRIVES • WINDOW LIFT
+            MOTORS • WIPER MOTORS • WINDLASSES
           </h2>
           <h2 class="section_2_subtitle_4">
             If you need help with a motor or related equipment, we can help!
@@ -193,15 +194,16 @@ export default function Home() {
           </a>
           <h2 class="section_2_subtitle_5">Over 100+ Years Experience</h2>
           <div class="image_grid">
+            <img src="/shop.jpg" alt="aes-shop" className="image_grid_item" />
+
             <img
-              src="/mechanic-1.jpg"
-              alt="aes-mechanic"
+              src="/inventory-2.jpg"
+              alt="aes-inventory"
               className="image_grid_item"
             />
-            <img src="/tire.jpg" alt="aes-tire" className="image_grid_item" />
             <img
-              src="/stock-2.jpg"
-              alt="aes-stock-items"
+              src="/inventory.jpg"
+              alt="aes-inventory"
               className="image_grid_item"
             />
           </div>
@@ -315,7 +317,7 @@ export default function Home() {
               <Grid sx={{ gridTemplateColumns: ["1fr", "1fr 1fr"], mt: 0 }}>
                 <Box>
                   <img
-                    src="/outside-4.png"
+                    src="/aes-outside.jpg"
                     alt="aes-workshop"
                     className="aes-outside"
                   />
