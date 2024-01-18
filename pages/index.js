@@ -117,16 +117,19 @@ export default function Home() {
           <div class="logo_inner">
             <img src="/logo.png" class="logo" />
           </div>
-          <a
-            href="https://www.ebay.com/str/aessandiego"
-            target="_blank"
-            class="shop_inventory"
-          >
-            Shop
-          </a>
           <a href="#services">Services</a>
           <a href="#reviews">Reviews</a>
           <a href="#contact">Contact</a>
+          <a
+            href="https://www.instagram.com/aesrebuilders"
+            target="_blank"
+            class="shop_inventory"
+          >
+            <i
+              class="fa fa-instagram"
+              style={{ fontSize: "28px", color: "white" }}
+            ></i>
+          </a>
         </div>
       </div>
       <div class="section_wrapper">
@@ -298,6 +301,16 @@ export default function Home() {
                 <Box>sales@automotiveexchangesupply.com</Box>
                 <Box>Fax</Box>
                 <Box>(619) 677-2790</Box>
+                <Box>Instagram</Box>
+                <Box>
+                  <a
+                    href="https://www.instagram.com/aesrebuilders/"
+                    target="_blank"
+                    className="address-link"
+                  >
+                    @aesrebuilders
+                  </a>
+                </Box>
                 <Box>Address</Box>
                 <Box>
                   <a
